@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import TodoStore from '../store/todostore';
+import TodoStore from '../store/setting_store';
 import TodoItem from '../todoitem/todoitem';
 import ItemUpdatedEvent from '../todoitem/itemupdatedevent';
 import {addItem, removeItem, updateItemText, updateItemCompletion} from '../store/actions';
@@ -19,6 +19,7 @@ export default class TodoList {
   }
 
   addItem() {
+    console.info(`adding new item: "${this.newItem}"`);
     this.store.dispatch(addItem(this.newItem));
     this.newItem = '';
   }

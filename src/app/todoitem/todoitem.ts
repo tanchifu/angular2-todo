@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from 'angular2/core';
-import {TodoItem as TodoItemModel} from './../store/todoitem';
+import {SettingItem as TodoItemModel} from './../store/setting_item';
 import ItemUpdatedEvent from './itemupdatedevent';
 
 @Component({
@@ -40,7 +40,7 @@ export default class TodoItem {
 
   cancelEdit(element: HTMLInputElement) {
     this.editMode = false;
-    element.value = this.item.text;
+    element.value = this.item.value;
   }
 
   commitEdit(updatedText: string) {

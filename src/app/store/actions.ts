@@ -16,7 +16,7 @@ export function removeItem(itemId: string): ITodoAction {
 
 export function updateItemText(itemId: string, text: string): ITodoAction {
   return {
-    type: 'UPDATE_ITEM_TEXT',
+    type: 'UPDATE_ITEM_VALUE',
     itemId,
     text
   };

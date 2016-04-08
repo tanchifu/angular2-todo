@@ -1,24 +1,24 @@
 import { List } from 'immutable';
-import { TodoItem } from './todoitem';
+import { SettingItem } from './setting_item';
 import { createStore } from 'redux';
 import { reducer, ITodoAction } from './reducer';
 
-export default class TodoStore {
+export default class SettingStore {
   store: Redux.Store;
 
   constructor() {
-    const storedItemsString = <string> localStorage.getItem('todolist') || '[]';
+    const storedItemsString = <string> localStorage.getItem('settingList') || '[]';
     const storedItems = <Array<any>> JSON.parse(storedItemsString);
-    const items = List<TodoItem>(storedItems.map(i => new TodoItem(i._data)));
+    const items = List<SettingItem>(storedItems.map(i => new SettingItem(i._data)));
     this.store = createStore(reducer, items);
 
     this.store.subscribe(() => {
-      localStorage.setItem('todolist', JSON.stringify(this.items.toJS()));
+      localStorage.setItem('settingList', JSON.stringify(this.items.toJS()));
     });
   }
 
 
-  get items(): List<TodoItem> {
+  get items(): List<SettingItem> {
     return this.store.getState();
   }
 
