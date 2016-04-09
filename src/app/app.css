@@ -1,0 +1,23 @@
+.md-headline {
+  text-align: center;
+}
+
+.md-switch-label {
+  padding-bottom: 0;
+  color: rgba(0,0,0,0.54);
+  font-size:11px
+}
+
+label.switch-top {
+  padding-bottom: 24px;
+  color: rgba(0,0,0,0.54);
+  font-size: 11px;
+}
+
+.table>tbody>tr>td, .table>thead>tr>td {
+  border-top: none;
+}
+
+.switch-inside-td {
+  margin: 0;
+}

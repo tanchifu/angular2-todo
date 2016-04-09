@@ -6,11 +6,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "module": "system",
+    "module": "commonjs",
     "moduleResolution": "node",
     "removeComments": true,
-    "sourceMap": false,
-    "noImplicitAny": true
+    "sourceMap": true,
+    "noImplicitAny": false
   },
   "filesGlob": [
     "src/**/*.ts",
@@ -19,10 +19,12 @@
   ],
   "files": [
     "src/app/bootstrap.ts",
+    "src/app/app.ts",
     "src/app/store/actions.ts",
     "src/app/store/reducer.ts",
     "src/app/store/setting_item.ts",
     "src/app/store/setting_store.ts",
+    "src/app/aboutpage/about.ts",
     "src/app/todoitem/itemupdatedevent.ts",
     "src/app/todoitem/todoitem.ts",
     "src/app/todolist/todolist.ts",
