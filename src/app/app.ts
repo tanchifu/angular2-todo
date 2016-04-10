@@ -11,8 +11,8 @@ import {AboutCmp} from './aboutpage/about';
 @Component({
   selector: 'app',
   viewProviders: [HTTP_PROVIDERS],
-  templateUrl: './app.html',
-  styleUrls: ['./app.css'],
+  templateUrl: './app/app.html',
+  styleUrls: ['./app/app.css'],
   encapsulation: ViewEncapsulation.None,
   directives: [ROUTER_DIRECTIVES] // test MATERIAL_DIRECTIVES]
 })

@@ -3,7 +3,7 @@ import {Component} from 'angular2/core';
 
 @Component({
   selector: 'about',
-  templateUrl: './about.html',
+  templateUrl: './app/aboutpage/about.html',
   // directives: [MATERIAL_DIRECTIVES]
 })
 export class AboutCmp {
